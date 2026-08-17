@@ -42,12 +42,11 @@
 | Layer | Technology |
 | :--- | :--- |
 | **Frontend** | React.js, Tailwind CSS |
-| **Backend** | Node.js, Express.js (RESTful API) |
-| **Database** | MongoDB (Mongoose ODM) |
-| **Media Storage** | Supabase Storage (Product images, avatars) |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB |
+| **Media Storage** | Supabase Storage (Product images) |
 | **Authentication** | JWT (JSON Web Tokens), bcrypt |
 | **Testing** | Postman, Node.js environment |
-| **Deployment** | Vercel (Frontend), Render (Backend) |
 
 ---
 
