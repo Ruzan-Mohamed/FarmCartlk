@@ -171,6 +171,19 @@ Team members should use standard **Conventional Commits** syntax:
 
 ---
 
+## 👥 Project Team (Group 10)
+
+| Name | Registration ID | Index No |
+| :--- | :--- | :--- |
+| Ruzan M.R.M | ITT/2024/093 | 2778 |
+| A.K.N Nethsara | ITT/2024/072 | 2757 |
+| R.M.B.M Rathnayaka | ITT/2024/088 | 2773 |
+| K.M Sadharuwan | ITT/2024/094 | 2779 |
+| Sigani S. | ITT/2024/102 | 2787 |
+| A.M.I.S Silva | ITT/2024/103 | 2788 |
+
+---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
