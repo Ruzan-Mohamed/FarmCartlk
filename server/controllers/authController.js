@@ -1,4 +1,4 @@
-import User from "../models/users.js";
+const User = require("../models/users.js");
 import bcrypt from "bcryptjs";
 
 const register = async (req, res) => {
