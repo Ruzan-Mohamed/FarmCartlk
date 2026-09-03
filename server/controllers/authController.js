@@ -1,8 +1,8 @@
 const User = require("../models/users.js");
-import bcrypt from "bcryptjs";
+const bcrypt = require("bcryptjs");
 
 const register = async (req, res) => {
-    const {name, email, password, profileImage, address } = req.body;
+    const {name, email, password, profileImage } = req.body;
 
     if (!name || !email || !password) {
         return res.status(400).json({ message: "Name, email and password are required" });
@@ -25,8 +25,7 @@ const register = async (req, res) => {
             email,
             password: hashedPassword,
             role: "buyer",
-            profileImage,
-            address
+            profileImage
         });
 
         await newUser.save();
@@ -38,4 +37,4 @@ const register = async (req, res) => {
     }
 };
 
-export { register };
+module.exports = { register };

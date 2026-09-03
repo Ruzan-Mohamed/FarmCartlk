@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+const authRoute = require("./routes/authRoute.js")
+
 dotenv.config();
 
 const app = express();
@@ -16,6 +18,8 @@ app.use(express.urlencoded({ extended: true}));
 app.get('/', (req, res) => {
     res.send("FarmCartlk API is running...");
 });
+
+app.use('/api/auth', authRoute);
 
 // DB Connction + Server Start
 const PORT = process.env.PORT || 5000;
