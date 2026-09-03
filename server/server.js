@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 
 const authRoute = require("./routes/authRoute.js")
+const uploadRoutes = require("./routes/uploadRoutes");
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', authRoute);
+app.use("/api/upload", uploadRoutes);
 
 // DB Connction + Server Start
 const PORT = process.env.PORT || 5000;
