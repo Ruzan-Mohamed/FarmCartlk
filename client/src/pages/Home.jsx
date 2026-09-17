@@ -276,7 +276,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-white text-base font-heading">Guaranteed Freshness</h4>
               <p className="text-xs text-stone-400 leading-relaxed mt-1">
-                Produce is harvested right before shipment directly from mountain and lowland Sri Lankan fields.
+                Quality produce sourced directly from Sri Lankan farmers and delivered fresh.
               </p>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function BuyerDashboard() {
   const [name, setName] = useState(user?.name || "");
   const [phone, setPhone] = useState(user?.phone || "");
 
-  // Fetch buyer orders
+  // Fetch buyer orders 
   useEffect(() => {
     const fetchBuyerOrders = async () => {
       try {
