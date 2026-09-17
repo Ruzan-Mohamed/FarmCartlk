@@ -4,7 +4,7 @@ const Category = require("../models/categories");
 const Order = require("../models/orders");
 const Farm = require("../models/farms");
 
-const getAdminStats = async (req, res) => {
+const getAdminStats = async (res) => {
     try {
         const totalUsers = await User.countDocuments();
         const totalFarmers = await User.countDocuments({ role: "farmer" });
