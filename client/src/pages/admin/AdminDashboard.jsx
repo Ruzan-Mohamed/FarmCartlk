@@ -110,7 +110,7 @@ export default function AdminDashboard() {
           <h1 className="text-3xl font-extrabold font-heading">
             System Administration
           </h1>
-          <p className="text-stone-300 text-sm">Oversight for farmers, buyers, categories, and marketplace orders.</p>
+          <p className="text-stone-300 text-sm">Management and administration of farmers, buyers, categories, and marketplace orders.</p>
         </div>
 
         <button
