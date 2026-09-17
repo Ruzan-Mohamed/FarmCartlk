@@ -11,14 +11,14 @@ const uploadProductImage = async (req, res) => {
 
     const file = req.file;
 
-    const fileName = `${Date.now()}-${file.originalname}`;
+    const fileName = `${Date.now()}-${file.originalname.replace(/[^a-zA-Z0-9.-]/g, "_")}`;
     const filePath = `products/${fileName}`;
 
     const { data, error } = await supabase.storage
       .from("farmcart-media")
       .upload(filePath, file.buffer, {
         contentType: file.mimetype,
-        upsert: false,
+        upsert: true,
       });
 
     if (error) {
@@ -31,10 +31,15 @@ const uploadProductImage = async (req, res) => {
       });
     }
 
+    const { data: urlData } = supabase.storage
+      .from("farmcart-media")
+      .getPublicUrl(data.path);
+
     return res.status(201).json({
       success: true,
-      message: "Product image uploaded successfully",
+      message: "Product image uploaded successfully to Supabase Storage",
       path: data.path,
+      publicUrl: urlData ? urlData.publicUrl : ""
     });
   } catch (error) {
     console.error("Upload controller error:", error);

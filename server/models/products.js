@@ -37,8 +37,35 @@ const productSchema = new mongoose.Schema({
     unit: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        default: 'kg'
     },
+
+    images: [{
+        type: String
+    }],
+
+    image: {
+        type: String,
+        default: ''
+    },
+
+    location: {
+        type: String,
+        default: 'Sri Lanka'
+    },
+
+    isOrganic: {
+        type: Boolean,
+        default: false
+    },
+
+    harvestDate: {
+        type: String,
+        default: 'Fresh Harvest'
+    },
+
+  
 
     isAvailable: {
         type: Boolean,

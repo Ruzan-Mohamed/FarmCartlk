@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const categorySchema = new mongoose.Schema({
+const farmSchema = new mongoose.Schema({
     farmer: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        required: true,
+        unique: true
     },
 
     farmName: {
@@ -24,6 +25,12 @@ const categorySchema = new mongoose.Schema({
         trim: true
     },
 
+    district: {
+        type: String,
+        default: 'Nuwara Eliya',
+        trim: true
+    },
+
     address: {
         type: String,
         required: true,
@@ -32,12 +39,12 @@ const categorySchema = new mongoose.Schema({
 
     farmSize: {
         type: Number,
-        required: true
+        default: 1
     },
 
     farmType: {
         type: String,
-        required: true,
+        default: 'Vegetables & Fruits',
         trim: true
     },
 
@@ -45,6 +52,11 @@ const categorySchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+
+    image: {
+        type: String,
+        default: ''
     },
 
     isActive: {
@@ -56,6 +68,6 @@ const categorySchema = new mongoose.Schema({
     timestamps: true
 });
 
-const Farm = mongoose.model('Farm', categorySchema);
+const Farm = mongoose.model('Farm', farmSchema);
 
 module.exports = Farm;

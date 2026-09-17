@@ -168,3 +168,8 @@ Team members should use standard **Conventional Commits** syntax:
 | Sigani S. | ITT/2024/102 | 2787 |
 | A.M.I.S Silva | ITT/2024/103 | 2788 |
 
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

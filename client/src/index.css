@@ -1,16 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
+  /* FarmCartLK Visual Palette */
   --color-primary: #31A464;
+  --color-primary-dark: #24824e;
   --color-secondary: #4C9AAD;
   --color-accent: #C77F1F;
   --color-background: #F5F5F4;
   --color-dark: #001D0D;
+  --color-harvest: #E68A00;
+  --color-surface: #FFFFFF;
 
   /* Typography */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Agricultural Subtle Pattern */
+.bg-farm-pattern {
+  background-color: #F5F5F4;
+  background-image: radial-gradient(#31A464 0.55px, transparent 0.55px), radial-gradient(#31A464 0.55px, #F5F5F4 0.55px);
+  background-size: 22px 22px;
+  background-position: 0 0, 11px 11px;
+  background-opacity: 0.05;
+}
+
+/* Harvest Label Badge animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-harvest {
+  animation: pulse-subtle 3s infinite ease-in-out;
 }
