@@ -46,7 +46,7 @@ export default function About() {
 
         <div className="rounded-3xl overflow-hidden border border-stone-200 shadow-md">
           <img
-            src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a85?w=800&auto=format&fit=crop&q=80"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEDUW-xeFj3GohKJ3ISUmDFex_2ezLcj3kOxr7az9Qmw&s=10"
             alt="Sri Lankan Farming Community"
             className="w-full h-80 object-cover"
           />
